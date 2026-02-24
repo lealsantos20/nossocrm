@@ -408,7 +408,7 @@ export async function createSupabaseProject(params: {
     organization_slug: params.organizationSlug,
     db_pass: params.dbPass,
     region_selection: params.regionCode
-      ? { type: 'region', code: params.regionCode }
+      ? { type: 'specific', code: params.regionCode }
       : params.regionSmartGroup
         ? { type: 'smartGroup', code: params.regionSmartGroup }
         : undefined,
